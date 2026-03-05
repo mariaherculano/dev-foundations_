@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To-do List</title>
+</head>
+<body>
+  <h1>Lista de Tarefas</h1>
+  <input id="tarefa" placeholder="Nova tarefa">
+  <button onclick="add()">Adicionar</button>
+  <ul id="lista"></ul>
+
+  <script>
+    function add() {
+      const tarefa = document.getElementById("tarefa").value;
+      if (!tarefa) return;
+      const li = document.createElement("li");
+      li.innerText = tarefa;
+      document.getElementById("lista").appendChild(li);
+      document.getElementById("tarefa").value = "";
+    }
+  </script>
+</body>
+</html>
